@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Flask Image Upload and Display by lucasalbini</title>
+
+{% if filename %}
+<div>
+    <img src="{{ url_for('display_image', filename=filename) }}">
+</div>
+{% endif %}
+
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+        <p>
+            <input type="file" name="file" autocomplete="off" required>
+        </p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>
