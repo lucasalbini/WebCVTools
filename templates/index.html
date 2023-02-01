@@ -1,19 +1,9 @@
-<!doctype html>
-<title>Flask Image Upload and Display by lucasalbini</title>
+{% extends "base.html" %}
 
-{% if filename %}
-<div>
-    <img src="{{ url_for('display_image', filename=filename) }}">
-</div>
-{% endif %}
+{% block title %}
+WebCV Tools
+{% endblock %}
 
-<form method="post" action="/" enctype="multipart/form-data">
-    <dl>
-        <p>
-            <input type="file" name="file" autocomplete="off" required>
-        </p>
-    </dl>
-    <p>
-        <input type="submit" value="Submit">
-    </p>
-</form>
+{% block sidebarcontent%}
+
+{% endblock %}

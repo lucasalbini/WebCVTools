@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+WebCV Tools
+{% endblock %}
+
+{% block module %}
+Color Processing{% endblock %}
+
+{% block sidebarcontent%}
+<!-- <input id="on-gray-button" type="button" value="Gray On" class="on-gray-button" onclick="grayscaleOn()"> -->
+<div>
+    <label for="color-processing">Color Processing</label>
+    <input type="checkbox" id="color-processing" name="color-processing" onchange="ajaxRequest()">
+</div>
+<!-- <input id="off-gray-button" type="button" value="Gray Off" class="off-gray-button"> -->
+{% endblock %}

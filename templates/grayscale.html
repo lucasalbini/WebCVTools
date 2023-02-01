@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+WebCV Tools
+{% endblock %}
+
+{% block module %}
+Color Processing{% endblock %}
+
+{% block sidebarcontent%}
+<!-- <input id="on-gray-button" type="button" value="Gray On" class="on-gray-button" onclick="grayscaleOn()"> -->
+<form action="/color-processing" method="post">
+    <button name="forwardBtn" type="submit">Gray ON</button>
+</form>
+<!-- <input id="off-gray-button" type="button" value="Gray Off" class="off-gray-button"> -->
+{% endblock %}

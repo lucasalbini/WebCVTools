@@ -1,0 +1,70 @@
+.header {
+    padding: 2px;
+    text-align: center;
+    background: #272727;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+
+.module {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.select {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 10;
+    right: 0;
+    background-color: #272727;
+    overflow-x: hidden;
+    padding-top: 160px;
+
+}
+
+.image-container {
+    position: fixed;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    right: 300px;
+    left: 30px;
+    height: auto;
+    width: auto;
+}
+
+.input-button {
+    display: none;
+}
+
+.item {
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 20px;
+}
+
+.label-upload {
+    background-color: #00AB66;
+}
+
+.side-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

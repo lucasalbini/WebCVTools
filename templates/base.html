@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<!-- <title>WebCV Tools</title> -->
+<title>{% block title %} {% endblock %}</title>
+
+<head>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script type="text/javascript" src="../static/js/functions.js"></script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="header">
+                <h1>WebCV Tools</h1>
+            </div>
+        </div>
+        <div>
+            <div class="image-container">
+                {% if filename %}
+                <div>
+                    <script>console.log(filename)</script>
+                    <!-- <img src="{{ url_for('display_image', filename=filename) }}"> -->
+                    <iframe src="{{ url_for('display_image', filename=filename) }}" frameborder="0" width="600"
+                        height="600"></iframe>
+                </div>
+                {% endif %}
+            </div>
+            <div class="sidebar">
+                <div align="center" class="side-item">
+                    <form method="post" action="/" method="POST" enctype="multipart/form-data">
+                        <label for='input-button' class="item">Selecionar um arquivo</label>
+                        <input id="input-button" type="file" name="file" class="input-button">
+
+                        <label for='upload-button' class="item label-upload">&#187;</label>
+                        <input id="upload-button" type="submit" class="input-button">
+                    </form>
+
+                    <select method="post" name="select" class="select"
+                        onchange="if (this.value) window.location.href=this.value.replace(/\s+/g, '-').toLowerCase()">
+                        <option>Selecione uma opcao</option>
+                        <option value="Color Processing">Color Processing</option>
+                        <option value="Stream Test">Stream Test</option>
+                    </select>
+
+                    <h1 class="module">{% block module %} {% endblock %}</h1>
+                    {% block sidebarcontent%} {% endblock %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
